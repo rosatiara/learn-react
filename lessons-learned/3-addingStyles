@@ -1,0 +1,26 @@
+index.css -> a global stylesheet. will be applied to all components.
+this index.css file will then be imported to index.js file
+
+#### FILE DELETED = App.css (don't forget to delete the import syntax too inside the App.js file) ####
+### FILE CHANGED = Navbar.js and index.css ########
+--- Navbar.js ---
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <h1>The Dojo Blog</h1>
+      <div className="links">
+        <a href="/">Home</a>
+        <a href="/create" style={{
+          color:"white",
+          backgroundColor:'#f1356d',
+          borderRadius: '8px'
+        }}>New Blog</a>
+      </div>
+    </nav>
+   );
+}
+ 
+export default Navbar;
+#### CONCLUSION ##
+We can do styling inside the javascript file. To do that just add style={{}} inside your target tag & place your css properties in the inner brackets.

@@ -1,0 +1,30 @@
+### FILE CHANGED : Home.js ###
+const Home = () => {
+  const handleClick = () => {
+    console.log("hello there!")
+  }
+
+  const handleClickAgain = (name) => {
+    console.log("well, you again," + name);
+  }
+
+  return (
+    <div className="home">
+      <h2>Homepage</h2>
+      <button onClick={handleClick}>Click me</button>
+      <button onClick={()=>{handleClickAgain("rosa")}}>Click me again plz</button>
+    </div>
+   );
+}
+ 
+export default Home;
+###### CONCLUSION ######
+In this example, I learned how to produce some events whenever we click a particular element in our project.
+How do we do that? We just simply have to add the onClick={} event listener and pass in any variables you've made.
+If we want to pass an argument inside the onClick event, we'll have to wrap the event listener with an anonymous function.
+For example, in line 15:
+onClick={
+  () => {
+    handleClickAgain("rosa")
+  }
+}

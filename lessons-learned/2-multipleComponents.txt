@@ -1,0 +1,48 @@
+### Component filename: Navbar.js
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <h1>The Dojo Blog</h1>
+      <div className="links">
+        <a href="/">Home</a>
+        <a href="/create">New Blog</a>
+      </div>
+    </nav>
+   );
+}
+export default Navbar;
+
+### Component filename: Home.js
+const Home = () => {
+  return (
+    <div className="home">
+      <h2>Homepage</h2>
+    </div>
+   );
+}
+export default Home;
+
+## ROOT filename: App.jsimport './App.css';
+import Navbar from './Navbar';
+import Home from './Home';
+
+function App() {
+
+  return (
+    <div className="App">
+      <Navbar/>
+      <div className="content">
+       <Home/>
+      </div>
+    </div>
+  );
+}
+export default App;
+// App.js is the root component.
+// A component is just a function that returns a jsx template and then that function is exported at the bottom of the file.
+
+################ CONCLUSION ################
+On React, it's pretty much all about components. As we know, the App.js file is the root component of our React project. That's the place where we'll put all our child components for our complete project.
+In this case, I just created two new components, Navbar.js and Home.js.
+Everytime we're making a new component, we have to import the filename inside and at the very beginning the App.js file.
+Tip: use emmet sfc (explanation about emmet is in the EMMET.txt file) so you won't forget to export your component!

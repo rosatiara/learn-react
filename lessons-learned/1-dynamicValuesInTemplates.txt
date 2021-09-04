@@ -1,0 +1,44 @@
+##### THESE ARE THE NOTES THAT I LEARNED ##### FILES INCLUDED HERE ARE THE FILE(S) CHANGED DURING THE LEARNING PROCESS ####
+/// FILE LOCATION: App.js
+
+import './App.css';
+
+function App() {
+  const title = 'Welcome to the new blog';
+  const likes = 50;
+  // const person = {name: 'rosa', age: 20}; //
+  const link = "https://www.google.com";
+  return (
+    <div className="App">
+      <div className="content">
+        <h1>{title}</h1>
+        <p>Liked {likes} times</p>
+        {/* <h1>{person}</h1> //this will cause an error, we cant output boolean or objects! */}
+        <p>{10}</p>
+        <p>{"helllooooo"}</p>
+        <p>{[1,2,3,4,5,6,7,9]}</p>
+        <p>{Math.random()*10}</p>
+        <a href={link}>Google site</a>
+      </div>
+    </div>
+  );
+}
+export default App;
+
+//// FILE LOCATION: index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
