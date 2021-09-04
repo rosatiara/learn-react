@@ -1,0 +1,34 @@
+### FILENAME: Home.js ####
+
+import {useState} from 'react';
+
+const Home = () => {
+  // let name = 'mario';
+  const [name, setName] = useState("mario")
+  const [age, setAge] = useState(20)
+  const handleClick = () => {
+    setName("ronaldo")
+    setAge(40)
+  }
+
+
+  return (
+    <div className="home">
+      <h2>Homepage</h2>
+      <p>{name} is {age} years old</p>
+      <button onClick={handleClick}>Click me</button>
+    </div>
+   );
+}
+ 
+export default Home;
+
+## CONCLUSION ##
+In this exercise, I learned about useState hook. 
+To use it, we have to:
+1) import the useState hook from the React library.
+2) First thing I wanted to do is to change the {name} everytime I click the button. To take the advantage of useState hook,
+we have to make a const array [variable name, function name] and in this case, it is [name, setName] and [age, setAge].
+3) the function we made inside the array will be declared on the handleClick onClick event.
+
+Why do we need to use useState hook? To make our variables reactive!
