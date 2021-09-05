@@ -1,6 +1,6 @@
 import Navbar from './Navbar';
 import Home from './Home';
-
+import BlogList from './BlogList';
 function App() {
 
   return (
