@@ -1,0 +1,40 @@
+When we try to run our program with the BlogList.js displayed like this, we'll get an error:
+src\BlogList.js
+  Line 5:8:  'blogs' is not defined  no-undef
+
+How? We didn't define the blogs inside the BlogList.js. Instead, we defined it in the Home.js file. There are two ways to overcome this problem.
+1) Move all the useState hook array from Home.js to BlogList.js
+2) Use props. Using props is more beneficial because it can make our components reusable. In this practice, we'll use this second option (use props).
+
+#### WHAT IS PROPS? ####
+Prop is a way to pass data from parent component (in this case, our parent component is Home.js) into a child component.
+### HOW COULD WE DO THAT? ###
+## FILENAME: Home.js ##
+return (
+    <div className="home">
+      <BlogList blogs={blogs} />
+    </div>
+   );
+
+Notice the blogs={blogs} over there? That is the prop! Simply just add like so:
+prop-name={theDataYouWantToPass}
+Also, don't forget to pass the prop into the parameter value of const BlogList.js, so it'll be like this at the end:
+##vFILENAME: BlogList.js
+
+const BlogList = (props) => {
+      const blogs = props.blogs
+      console.log(props, blogs) // just for the sake of debugging
+  return ( 
+    <div className="blog-list">
+      {blogs.map((blog) => (
+        <div className="blog-preview" key={blog.id}>
+          <h2>{blog.title}</h2>
+          <p>Written by {blog.author}</p>
+
+        </div>
+      ))}
+    </div>
+   );
+}
+ 
+export default BlogList;
