@@ -1,0 +1,3 @@
+JSON server is super useful to fetch data. In this lesson, I created a folder called data and created a new file called db.json which contains informations about my blogs (array).
+to install JSON server locally on your project, just open your terminal and type -> npx json-server --watch <your json file location> --port <port specification>
+Note that the port specification is optional. 
