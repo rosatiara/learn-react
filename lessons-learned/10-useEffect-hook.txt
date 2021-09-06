@@ -1,0 +1,12 @@
+useEffect hook runs EVERY RENDERING process.
+What if we want to use useEffect only on a particular condition?
+We can create second parameter!
+
+Take a look the codes below for example,
+
+useEffect(()=>{
+    console.log("hi")
+    console.log(name)
+  }, [name])
+
+the second parameter of that hook is [name], that means the useEffect hook will runs every time [name] is being renderred.
