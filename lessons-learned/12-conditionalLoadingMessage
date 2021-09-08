@@ -1,0 +1,20 @@
+In this lesson, I learned how to configure a loading message before the blogs come out. 
+First, I defined the useState hook by writing -> const [isLoading, setIsLoading] = useState(true)
+
+And then, in the useState function, I wrote this:
+useEffect(() => {
+    setTimeout(()=>{
+      fetch('http://localhost:8000/blogs')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        setBlogs(data);
+        setIsLoading(false)
+      }) 
+    }, 1000)
+  }, [])
+
+The useEffect hook produces an arrow function of setTimeout which holds two parameters, the fetch arrow function and the delay duration which is 1000ms.
+ {isLoading && <div>Loading...</div> } in the return function will produces an output of "Loading.." for 1000ms long before our blogs come out!
+
